@@ -49,12 +49,9 @@ Follow these instructions to install Maven properly:
    * Press **F7** and select the Java JDK path "C:\Program Files\Java\jdk1.8.0_60" and then click **OK** (version of jdk may differ)
    * Save the changed settings by clicking the save button
 4. Add maven folder to PATH by following next instructions:
-   * Select path variable:
-   ![image1](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/rapidee-set-path-variable.jpg "Select path variable")
-   * Click button **Add value to the current variable**
-   ![image2](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/selenium-rapidee-add-variable.jpg "Add value to the current variable")
-   * Copy and paste maven bin directory and press enter then click save button
-   ![image3](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/selenium-rapidee-save.jpg "Copy and paste maven bin directory")
+   * Select path variable: ![image1](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/rapidee-set-path-variable.jpg "Select path variable")
+   * Click button **Add value to the current variable** ![image2](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/selenium-rapidee-add-variable.jpg "Add value to the current variable")
+   * Copy and paste maven bin directory and press enter then click save button ![image3](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/selenium-rapidee-save.jpg "Copy and paste maven bin directory")
    * Check if maven installation is successfull
 	   * Open **Command Prompt** and type in: `mvn -v`
 	   * Expected output: `Apache Maven 3.6.2 ...` (version may differ)
