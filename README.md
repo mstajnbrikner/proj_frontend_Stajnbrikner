@@ -192,7 +192,7 @@ Cross-browser testing is enabled in this project. It is possible to run tests on
 <parameter name="browserName" value="chrome"></parameter>
 ``` 
 
-### Running test through "Command Prompt"
+### Running tests through "Command Prompt"
 
 We will run our tests through "CMD" because then **surefire reports** will be created. Follow these instructions:
 1. Open **Command Prompt** and locate your project's directory using `cd` command. 
@@ -201,7 +201,17 @@ We will run our tests through "CMD" because then **surefire reports** will be cr
 
 Now you should see tests running in given browser if everything is well configured.
 
+### Watching test reports in browser
 
+When testing is over, we can find test report following these instructions:
+1. Locate project directory in **File explorer**
+2. Open "target" directory
+3. Open "surefire-reports" directory
+4. Open **"index.html"** file
+
+If result is similar to one from picture below, testing process is finished.
+
+![image10](https://raw.githubusercontent.com/mstajnbrikner/projFrontendImages/master/createTestNg.jpg "report")
 
 
 
