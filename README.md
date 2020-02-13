@@ -110,7 +110,7 @@ We will use this file to determine which test methods or classes we want to run.
 Follow these instructions to create and configure "testng.xml" file properly:
 1. Right click on root folder of project then click **New** and then click **File**
 
-![image9](https://raw.githubusercontent.com/mstajnbrikner/projFrontendImages/master/createTestNg.jpg "testng")
+![image9](https://raw.githubusercontent.com/mstajnbrikner/projFrontendImages/master/crTestNg.jpg "testng")
 
 2. Choose name "testng.xml" and click **Ok**
 
@@ -182,6 +182,7 @@ If you want, you can configure "testng.xml" as you want. For example, let's conf
 ```
 
 Cross-browser testing is enabled in this project. It is possible to run tests on **Google Chrome** or **Mozilla Firefox**. Let's say we want to run tests on Firefox. We just need to change one parameter in "testng.xml". 
+
 **Firefox:**
 ```xml
 <parameter name="browserName" value="firefox"></parameter>
