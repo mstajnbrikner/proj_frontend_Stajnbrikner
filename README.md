@@ -1,14 +1,14 @@
 # Web frontend testing project
 ## Introduction
 
-This project is made as a final task for one of the courses called **Software testing methods and techniques** on Faculty of Electrical Engineering, Computer Science and Information Technology. This project consists of 5 tests that are testing frontend of webpage of travel agency called "Arriva".
+This project is made as a final task for one of the courses called **Software testing methods and techniques** on Faculty of Electrical Engineering, Computer Science and Information Technology in Osijek. This project consists of 5 tests that are testing frontend of webpage of travel agency called "Arriva".
 
 Tools used in project:
-* IntelliJ IDEA Community Edition - *IDE for developing and testing computer software*
-* Selenium - *portable framework for testing web applications*
-* TestNG - *testing framework inspired from JUnit and NUnit; makes testing more powerful and easier*
-* Apache Maven - *software project management and comprehension tool based on the concept of a project object model*
-* Ranorex Selocity - *free extension for the Chrome DevTools that instantly provides unique and robust selectors for your web page*
+* **IntelliJ IDEA Community Edition** - *IDE for developing and testing computer software*
+* **Selenium** - *portable framework for testing web applications*
+* **TestNG** - *testing framework inspired from JUnit and NUnit; makes testing more powerful and easier*
+* **Apache Maven** - *software project management and comprehension tool based on the concept of a project object model*
+* **Ranorex Selocity** - *free extension for the Chrome DevTools that instantly provides unique and robust selectors for your web page*
 
 ## Set up PC before testing
 
@@ -64,14 +64,70 @@ Follow these instructions to install Maven properly:
    * Check if maven installation is successfull
 	   * Open **Command Prompt** and type in: `mvn -v`
 	   * Expected output: `Apache Maven 3.6.2 ...` (version may differ)
+	   
+### Install IntelliJ IDEA
 
+We will use IntelliJ to write our test automation code. Download it from this [link](https://www.jetbrains.com/idea/download/#section=windows) and install it by clicking **Next** until it is finished.
 
+## Create and set up IntelliJ project before testing
 
+### Create IntelliJ project
 
+Follow these instructions to create IntelliJ project properly:
+1. Open **IntelliJ** and click **Create New Project**
 
+![image4](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/intellij-download.jpg "create project")
 
+2. Select **Maven** as the project type and browse the JAVA folder as "Project SDK"; click **Next**
 
+![image5](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/selenium-intellij-settings.jpg "select maven")
 
+3. Fill GroupId and ArtifactId as you want then click **Next**
+
+![image6](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/intellij-maven-selenium.jpg "fill ids")
+
+4. Give a name to your project and click **Finish**
+
+![image7](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/wedriver-intellij.jpg "name project")
+
+5. When project is finally created you will see pop-up window and then click **Enable Auto-Import**
+
+![image8](https://224926-685269-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2015/09/intellij-selenium-webdriver.jpg "enable autoimport")
+
+### Set up "pom.xml" file
+
+In this file we will conigure dependencies which are needed for tests to run properly. You can simply open "pom.xml" file from this repository and copy its content to your "pom.xml" file.
+* **Selenium Dependency** - *it is required to use the Selenium framework for browser automation in our project*
+* **TestNG Dependency** - *is required to use TestNG framework (test runner in our project)*
+* **Maven-surefire-plugin** - *it is used for configuration and running tests / configuration of TestNG.xml file*
+* **Maven-compiler-plugin** - *it is used for code compiling and using special JDK version for compilation*
+* **webdrivermanager** - *it allows to automate the management of the binary drivers (e.g. chromedriver, geckodriver,...) required by Selenium WebDriver*
+* **slf4j-simple** - *serves as a simple facade or abstraction for various logging frameworks; allows the end-user to plug in the desired logging framework at deployment time*
+
+### Create and set up "testng.xml" file
+
+We will use this file to determine which test methods or classes we want to run. It is also possible to change some test parameters in this file (e.g. change browser).
+Follow these instructions to create and configure "testng.xml" file properly:
+1. Right click on root folder of project then click **New** and then click **File**
+
+![image9](https://raw.githubusercontent.com/mstajnbrikner/projFrontendImages/master/createTestNg.jpg "testng")
+
+2. Choose name "testng.xml" and click **Ok**
+
+3. Open "testng.xml" file from this repository and copy its content into yours "testng.xml" file
+
+### Create packages "test" and "pages"; create "*.java" files 
+
+Do following for each package:
+1. Locate `java` folder under `yourRootProjDirectory\src\test` and right click on it
+2. Click **New** and then click **Package**
+3. Choose name ("test"/"pages") and click **Ok**
+
+Do following for each "*.java" file (look for packages in this repository under "src/test/java"):
+1. Right click on package where you want to create **Java class**
+2. Click **New** and then click **Java Class**
+3. Choose name that corresponds to one in this repository
+4. Copy code from "*.java" file from this repository with same name as your file
 
 
 
