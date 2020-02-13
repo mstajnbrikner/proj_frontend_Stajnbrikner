@@ -127,9 +127,79 @@ Do following for each "*.java" file (look for packages in this repository under 
 1. Right click on package where you want to create **Java class**
 2. Click **New** and then click **Java Class**
 3. Choose name that corresponds to one in this repository
-4. Copy code from "*.java" file from this repository with same name as your file
+4. Copy and paste code from "*.java" file from this repository with same name as your file
 
+## Testing
 
+If everything is configured as it must be, tests will run properly. We can configure and run tests as it will be described below.
+
+### Configuring tests through "testng.xml"
+
+Originnaly, "testng.xml" is configured to run all 5 tests.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AllTestsSuite">
+    <test name="selenium NG test">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="test.ArrivaTripTest">
+                <methods>
+                    <include name="testMethod1"/>
+                    <include name="testMethod2"/>
+                    <include name="testMethod3"/>
+                    <include name="testMethod4"/>
+                    <include name="testMethod5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+```
+
+If you want, you can configure "testng.xml" as you want. For example, let's configure "testng.xml" to run only "testMethod4" and "testMethod5".
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AllTestsSuite">
+    <test name="selenium NG test">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="test.ArrivaTripTest">
+                <methods>
+                    <!--include name="testMethod1"/>
+                    <include name="testMethod2"/>
+                    <include name="testMethod3"/-->
+                    <include name="testMethod4"/>
+                    <include name="testMethod5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+```
+
+Cross-browser testing is enabled in this project. It is possible to run tests on **Google Chrome** or **Mozilla Firefox**. Let's say we want to run tests on Firefox. We just need to change one parameter in "testng.xml". 
+**Firefox:**
+```xml
+<parameter name="browserName" value="firefox"></parameter>
+``` 
+
+**Chrome:**
+```xml
+<parameter name="browserName" value="chrome"></parameter>
+``` 
+
+### Running test through "Command Prompt"
+
+We will run our tests through "CMD" because then **surefire reports** will be created. Follow these instructions:
+1. Open **Command Prompt** and locate your project's directory using `cd` command. 
+2. Type in `mvn site`
+3. Type in `mvn test`
+
+Now you should see tests running in given browser if everything is well configured.
 
 
 
