@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AllTestsSuite">
+    <test name="selenium NG test">
+        <parameter name="browserName" value="chrome"></parameter>
+        <classes>
+            <class name="test.ArrivaTripTest">
+                <methods>
+                    <include name="testMethod1"/>
+                    <include name="testMethod2"/>
+                    <include name="testMethod3"/>
+                    <include name="testMethod4"/>
+                    <include name="testMethod5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

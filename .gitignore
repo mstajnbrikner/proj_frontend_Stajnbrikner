@@ -1,0 +1,10 @@
+/target
+.idea/
+*.iml
+Desktop/*
+Test Results*
+*.ipr
+*.iws
+ajcore*.txt
+*/target/*
+TestLogs/
